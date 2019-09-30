@@ -1,8 +1,43 @@
-body{
-font-family: 'Montserrat', sans-serif;
+body {
+	font-family: "Montserrat", sans-serif;
 }
 
-#portrait{
+.grid {
+	counter-reset: grid-item;
+}
+
+/* clearfix */
+.grid:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+	float: left;
+}
+
+.textCard.short {
+	max-height: 150px;
+	overflow: hidden;
+}
+
+.textCard.short .card-body:before {
+	text-align: center;
+	padding-top: 110px;
+	content: "Więcej...";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: linear-gradient(transparent 50px, white 110px);
+	border-radius: 15px;
+}
+
+#portrait {
 	max-width: 100%;
 	border-radius: 50%;
 	object-fit: cover;
@@ -10,19 +45,19 @@ font-family: 'Montserrat', sans-serif;
 	/*width: 50px;*/
 }
 
-.box{
+.box {
 	position: relative;
-	width: 100%;		/* desired width */
+	width: 100%; /* desired width */
 	margin: 0 auto;
 }
-.box:before{
+.box:before {
 	content: "";
 	display: block;
-	padding-top: 100%; 	/* initial ratio of 1:1*/
+	padding-top: 100%; /* initial ratio of 1:1*/
 }
 
-.content{
-	position:  absolute;
+.content {
+	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -30,239 +65,253 @@ font-family: 'Montserrat', sans-serif;
 	/*width:100%;*/
 }
 
-button.btn, a.btn{
+button.btn,
+a.btn {
 	width: 80%;
 	height: 80%;
 	border-radius: 50%;
 	padding: 0;
-	position:  absolute;
+	position: absolute;
 	top: 10%;
 	left: 10%;
 	bottom: 10%;
 	right: 10%;
 }
 
-a.btn{
-display: flex;
-align-items: center;
-justify-content: center;
+a.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-a.btn p{
+a.btn p {
 	margin: 0;
 }
 
-
-.mainContent{
+.mainContent {
 	margin-top: 100px;
 }
 
-.jumbotron{
+.jumbotron {
 	padding: 30px 30px;
 }
 
-.backgroundCol1{
+.backgroundCol1 {
 	background-color: #1278e4;
 }
-.backgroundCol2{
+.backgroundCol2 {
 	background-color: #f4f5f6;
 }
-.backgroundCol3{
+.backgroundCol3 {
 	background-color: #f208ab;
 }
-.backgroundCol4{
+.backgroundCol4 {
 	background-color: #042140;
 }
-.backgroundCol5{
+.backgroundCol5 {
 	background-color: #042140;
 }
 
-.fontCol1{
+.fontCol1 {
 	color: #1278e4;
 }
-.fontCol2{
+.fontCol2 {
 	color: #f4f5f6;
 }
-.fontCol3{
+.fontCol3 {
 	color: #f208ab;
 }
-.fontCol4{
+.fontCol4 {
 	color: #042140;
 }
-.fontCol5{
+.fontCol5 {
 	color: #042140;
 }
 
-.fontColR, a, a:hover, .btn{
+.fontColR,
+a,
+a:hover,
+.btn {
 	color: #042140;
 	text-decoration: none;
 }
 
-
-.centerText{
+.centerText {
 	text-align: center;
 }
 
-.card{
+.card {
 	height: 100%;
 	border: 5px #042140 solid;
 	border-radius: 20px;
 }
 
 .card-img-top {
-    height: 15rem;
-    object-fit: cover;
+	height: 15rem;
+	object-fit: cover;
 }
 
 .scaled {
-  transform: scale(0.2917); /* Equal to scaleX(0.7) scaleY(0.7) */
-  transform-origin: left top;
-  /*transform-origin: top;*/
+	transform: scale(0.2917); /* Equal to scaleX(0.7) scaleY(0.7) */
+	transform-origin: left top;
+	/*transform-origin: top;*/
 }
 
-.col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12{
+.col-lg-4,
+.col-lg-6,
+.col-lg-8,
+.col-lg-12 {
 	margin-top: 10px;
 }
 
-a .card:hover, .card-to-hover:hover{
+.textCard:hover {
+	border-color: #f208ab;
+}
+
+.textCard:hover .card-header {
+	background-color: #f208ab;
+}
+
+a .card:hover,
+.card-to-hover:hover {
 	border-color: #f208ab;
 	background-color: #f208ab;
 }
 
-.card-img-top{
+.card-img-top {
 	border-radius: 15px 15px 0px 0px;
 }
 
-.circularBtn{
+.circularBtn {
 	border: 3px #042140 solid;
 	border-radius: 50%;
 	font-size: 1.2em;
 	font-weight: 600;
 }
 
-.circularBtn:hover{
+.circularBtn:hover {
 	border-color: #f208ab;
 	background-color: #f208ab;
 }
 
-#togglerBtn{
+#togglerBtn {
 	color: #042140;
 	line-height: 30px;
 	/*font-size: 1.5em;*/
 }
 
-.dropdown-menu{
+.dropdown-menu {
 	background-color: #f208ab;
-	border:none;
+	border: none;
 	padding: 0px;
 	margin: 0px;
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
 	background-color: #f208ab;
 }
 /*.dropdown-item:hover{
 	background-color: #f208ab;
 }*/
 
-.beginningText{
+.beginningText {
 	font-size: 1.2rem;
 }
 
-.myBorder{
+.myBorder {
 	border: #042140 2px solid;
 	border-radius: 5px;
 	text-align: center;
 	padding: 10px 0px;
 }
 
-#begTextSect{
+#begTextSect {
 	border-left: 3px #042140 solid;
-	padding-left:20px;
+	padding-left: 20px;
 }
 
-.hidden{
-	visibility: 0.0;
+.hidden {
+	visibility: 0;
 }
 
 @media (max-width: 575.98px) {
 	.card-columns {
-        column-count: 1;
-    }
+		column-count: 1;
+	}
 
-    .jumbotron{
-    	padding:10px;
-    }
+	.jumbotron {
+		padding: 10px;
+	}
 
-    #begTextSect{
-    	padding:0;
-    	border-left: none;
-    }
+	#begTextSect {
+		padding: 0;
+		border-left: none;
+	}
 
-    button.btn, a.btn{
-	width: 100%;
-	height: 100%;
-	position:  absolute;
-	top: 0%;
-	left: 0%;
-	bottom: 0%;
-	right: 0%;
-}
-.circularBtn{
-	font-size: 4.2vw;
-	font-weight: 500;
-}
+	button.btn,
+	a.btn {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		bottom: 0%;
+		right: 0%;
+	}
+	.circularBtn {
+		font-size: 4.2vw;
+		font-weight: 500;
+	}
 
-.navbar-brand, .navbar-nav, .dropdown-item{
-	font-size: 0.9rem;
-}
+	.navbar-brand,
+	.navbar-nav,
+	.dropdown-item {
+		font-size: 0.9rem;
+	}
 
-
-h1{
-	font-size: 27px;
-}
-
+	h1 {
+		font-size: 27px;
+	}
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) {
 	.card-columns {
-        column-count: 2;
-    }
+		column-count: 2;
+	}
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px) {
 	.card-columns {
-        column-count: 3;
-    }
+		column-count: 3;
+	}
 }
 
-
-.modalBigSize{
+.modalBigSize {
 	/*min-width: 1000px;*/
 
-	min-width:100vw;
+	min-width: 100vw;
 	margin: 0px;
 }
 
-.carousel-item img{
+.carousel-item img {
 	margin: auto auto;
 }
 
-.modalBigSize .modal-content{
-	background-color: rgba(255,255,255,0);
+.modalBigSize .modal-content {
+	background-color: rgba(255, 255, 255, 0);
 }
-
-
 
 @media (max-width: 992px) {
-    #portrait{margin-top: 30px;}
+	#portrait {
+		margin-top: 30px;
+	}
 }
 
-.navbar{
+.navbar {
 	width: 100vw;
 	/*max-width: 90%;*/
 }
 
-.gameSize{
-	width:100%;
+.gameSize {
+	width: 100%;
 }
